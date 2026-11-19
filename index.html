@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MAHIDI Web Development builds modern websites for companies, offices, shops and businesses.">
+  <meta name="theme-color" content="#080808">
+  <title>MAHIDI | Web Development</title>
+  <style>
+    :root{--gold:#d4af37;--bg:#080808;--panel:#121212;--muted:#c5c5c5}
+    *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+    body{font-family:Arial,"Noto Sans Arabic",sans-serif;background:var(--bg);color:#fff;line-height:1.75}
+    a{color:inherit}
+    header{position:sticky;top:0;z-index:10;background:#0c0c0cf2;border-bottom:1px solid #292929;padding:17px 7%;display:flex;justify-content:space-between;align-items:center;gap:18px;backdrop-filter:blur(10px)}
+    .logo{font-size:25px;font-weight:800;letter-spacing:3px;color:var(--gold);white-space:nowrap}
+    nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+    nav a{text-decoration:none;font-size:14px;color:#eee}nav a:hover{color:var(--gold)}
+    button,.btn{border:0;cursor:pointer;text-decoration:none;display:inline-block;padding:11px 20px;border-radius:5px;font-weight:bold}
+    .lang{background:transparent;color:var(--gold);border:1px solid var(--gold);padding:8px 13px}
+    .btn{background:var(--gold);color:#090909}.btn:hover{background:#fff}
+    .hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:75px 20px;background:radial-gradient(ellipse at center,#302713 0%,#111 38%,#080808 75%)}
+    .hero-inner{max-width:850px}.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:13px}
+    h1{font-size:clamp(48px,9vw,88px);letter-spacing:5px;color:var(--gold);line-height:1.2;margin:12px 0}
+    .hero h2{font-size:clamp(22px,4vw,36px);margin-bottom:15px}.hero p{color:var(--muted);font-size:18px;max-width:700px;margin:0 auto 28px}
+    section{padding:78px 8%}.about,.why,.contact{background:#101010}
+    .title{text-align:center;color:var(--gold);font-size:clamp(28px,4vw,38px);margin-bottom:10px}
+    .sub{text-align:center;color:var(--muted);max-width:720px;margin:0 auto 38px}
+    .about-copy{max-width:850px;margin:auto;text-align:center;color:var(--muted);font-size:17px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+    .card{background:var(--panel);border:1px solid #292929;border-radius:10px;padding:27px;transition:.25s}
+    .card:hover{transform:translateY(-5px);border-color:var(--gold)}
+    .icon{font-size:32px;margin-bottom:10px}.card h3{color:var(--gold);margin-bottom:8px}.card p,.why-list p{color:var(--muted);font-size:15px}
+    .why-list{max-width:780px;margin:auto;display:grid;gap:13px}
+    .why-list p{background:#191919;border-left:3px solid var(--gold);padding:14px 18px;border-radius:4px}
+    [dir="rtl"] .why-list p{border-left:0;border-right:3px solid var(--gold)}
+    .steps .card h3{font-size:19px}
+    .contact{text-align:center}.contact p{color:var(--muted);margin-bottom:25px}
+    .contact-links{display:flex;justify-content:center;flex-wrap:wrap;gap:13px}
+    .outline{border:1px solid var(--gold);color:var(--gold);background:transparent}.outline:hover{background:var(--gold);color:#080808}
+    .visitor{margin:28px auto 0;display:inline-flex;align-items:center;gap:9px;border:1px solid #343434;border-radius:30px;padding:8px 16px;color:var(--muted);font-size:14px}
+    .visitor strong{color:var(--gold);font-size:17px}
+    footer{text-align:center;padding:25px 15px;background:#050505;color:#888;border-top:1px solid #252525;font-size:13px}footer span{color:var(--gold)}
+    [dir="rtl"] body{text-align:inherit}
+    [dir="rtl"] nav{direction:rtl}
+    [dir="rtl"] .hero p,[dir="rtl"] .about-copy,[dir="rtl"] .sub,[dir="rtl"] .contact p{line-height:2}
+    @media(max-width:760px){header{flex-direction:column;padding:15px 5%}nav{justify-content:center;gap:13px}nav a{font-size:12px}section{padding:62px 6%}.hero{min-height:72vh}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">MAHIDI</div>
+  <nav>
+    <a href="#home" data-en="Home" data-ps="کور">Home</a>
+    <a href="#about" data-en="About" data-ps="زموږ په اړه">About</a>
+    <a href="#services" data-en="Services" data-ps="خدمات">Services</a>
+    <a href="#why" data-en="Why Us" data-ps="ولې موږ؟">Why Us</a>
+    <a href="#contact" data-en="Contact" data-ps="اړیکه">Contact</a>
+    <button class="lang" id="languageButton" type="button">پښتو</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="eyebrow" data-en="Creative • Modern • Professional" data-ps="نوښت • عصري • مسلکي">Creative • Modern • Professional</div>
+    <h1>MAHIDI</h1>
+    <h2 data-en="Professional Web Development" data-ps="مسلکي ویب‌سایټ جوړونه">Professional Web Development</h2>
+    <p data-en="We build modern, attractive and responsive websites for companies, offices, shops and businesses. Give your business a strong online presence."
+       data-ps="موږ شرکتونو، دفترونو، پلورنځیو او کاروبارونو ته عصري، ښکلي او د موبایل لپاره مناسب ویب‌سایټونه جوړوو. خپل کاروبار ته پیاوړی انلاین حضور ورکړئ.">
+       We build modern, attractive and responsive websites for companies, offices, shops and businesses. Give your business a strong online presence.
+    </p>
+    <a href="#contact" class="btn" data-en="Start Your Project" data-ps="خپل پروژه پیل کړئ">Start Your Project</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2 class="title" data-en="About MAHIDI" data-ps="د مهیدي په اړه">About MAHIDI</h2>
+  <p class="sub" data-en="Turning business ideas into professional websites." data-ps="د کاروبار نظریات په مسلکي ویب‌سایټونو بدلول.">Turning business ideas into professional websites.</p>
+  <p class="about-copy" data-en="MAHIDI Web Development focuses on creating modern, clear and user-friendly websites. We help companies, offices, shops and growing businesses present their services online, connect with customers and build a professional digital presence. We listen to your needs and shape the website around your goals."
+     data-ps="MAHIDI Web Development د عصري، منظم او د کاروونکو لپاره د اسانه ویب‌سایټونو په جوړولو تمرکز کوي. موږ له شرکتونو، دفترونو، پلورنځیو او مخ پر ودې کاروبارونو سره مرسته کوو چې خپل خدمات په انلاین بڼه وړاندې کړي، له مشتریانو سره اړیکه ونیسي او مسلکي ډیجیټلي حضور ولري. موږ ستاسو اړتیاوو ته غوږ نیسو او ویب‌سایټ ستاسو د موخو له مخې جوړوو.">
+     MAHIDI Web Development focuses on creating modern, clear and user-friendly websites. We help companies, offices, shops and growing businesses present their services online, connect with customers and build a professional digital presence. We listen to your needs and shape the website around your goals.
+  </p>
+</section>
+
+<section id="services">
+  <h2 class="title" data-en="Our Services" data-ps="زموږ خدمات">Our Services</h2>
+  <p class="sub" data-en="Website solutions designed around your business." data-ps="ستاسو د کاروبار لپاره مناسبې ویب‌حللارې.">Website solutions designed around your business.</p>
+  <div class="grid">
+    <article class="card"><div class="icon">🏢</div><h3 data-en="Company Websites" data-ps="د شرکتونو ویب‌سایټونه">Company Websites</h3><p data-en="Professional websites to introduce your company, team and services." data-ps="مسلکي ویب‌سایټونه چې ستاسو شرکت، کاري ډله او خدمات معرفي کوي.">Professional websites to introduce your company, team and services.</p></article>
+    <article class="card"><div class="icon">🏬</div><h3 data-en="Business & Shop Websites" data-ps="د کاروبار او پلورنځي ویب‌سایټونه">Business & Shop Websites</h3><p data-en="Present your products and business information online." data-ps="خپل محصولات او د کاروبار معلومات په انلاین بڼه وړاندې کړئ.">Present your products and business information online.</p></article>
+    <article class="card"><div class="icon">🏛️</div><h3 data-en="Office & Organization Websites" data-ps="د دفترونو او مؤسسو ویب‌سایټونه">Office & Organization Websites</h3><p data-en="Clear, organized websites for offices, institutions and organizations." data-ps="د دفترونو، ادارو او مؤسسو لپاره منظم او روښانه ویب‌سایټونه.">Clear, organized websites for offices, institutions and organizations.</p></article>
+    <article class="card"><div class="icon">👤</div><h3 data-en="Personal Websites" data-ps="شخصي ویب‌سایټونه">Personal Websites</h3><p data-en="A professional online profile for individuals and portfolios." data-ps="د اشخاصو او کاري نمونو لپاره مسلکي انلاین پېژندپاڼه.">A professional online profile for individuals and portfolios.</p></article>
+    <article class="card"><div class="icon">📱</div><h3 data-en="Responsive Design" data-ps="د ټولو وسایلو لپاره ډیزاین">Responsive Design</h3><p data-en="Layouts that adapt to phones, tablets and desktop screens." data-ps="داسې ډیزاین چې په موبایل، ټابلیټ او کمپیوټر کې سم ښکاري.">Layouts that adapt to phones, tablets and desktop screens.</p></article>
+    <article class="card"><div class="icon">⚙️</div><h3 data-en="Updates & Maintenance" data-ps="تازه کول او ساتنه">Updates & Maintenance</h3><p data-en="Content changes, improvements and ongoing website support." data-ps="د معلوماتو بدلون، اصلاحات او د ویب‌سایټ دوامداره ملاتړ.">Content changes, improvements and ongoing website support.</p></article>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <h2 class="title" data-en="Why Choose Us?" data-ps="ولې موږ انتخاب کړئ؟">Why Choose Us?</h2>
+  <p class="sub" data-en="A thoughtful process and a focus on quality." data-ps="منظمه کاري طریقه او کیفیت ته پاملرنه.">A thoughtful process and a focus on quality.</p>
+  <div class="why-list">
+    <p data-en="✓ Modern and professional designs" data-ps="✓ عصري او مسلکي ډیزاینونه">✓ Modern and professional designs</p>
+    <p data-en="✓ Mobile-friendly, responsive layouts" data-ps="✓ د موبایل لپاره مناسب او ځواب ویونکي ډیزاینونه">✓ Mobile-friendly, responsive layouts</p>
+    <p data-en="✓ Clear communication about your requirements" data-ps="✓ ستاسو د غوښتنو په اړه روښانه خبرې اترې">✓ Clear communication about your requirements</p>
+    <p data-en="✓ Careful testing before delivery" data-ps="✓ د سپارلو مخکې دقیقه ازموینه">✓ Careful testing before delivery</p>
+    <p data-en="✓ Solutions shaped around your project" data-ps="✓ ستاسو د پروژې مطابق حللارې">✓ Solutions shaped around your project</p>
+  </div>
+</section>
+
+<section class="steps">
+  <h2 class="title" data-en="How We Work" data-ps="زموږ د کار طریقه">How We Work</h2>
+  <p class="sub" data-en="From the first conversation to the finished website." data-ps="له لومړنیو خبرو څخه تر بشپړ ویب‌سایټ پورې.">From the first conversation to the finished website.</p>
+  <div class="grid">
+    <article class="card"><h3 data-en="01. Discussion" data-ps="۰۱. خبرې اترې">01. Discussion</h3><p data-en="We understand your business, audience and website needs." data-ps="ستاسو کاروبار، مخاطبین او د ویب‌سایټ اړتیاوې پېژنو.">We understand your business, audience and website needs.</p></article>
+    <article class="card"><h3 data-en="02. Planning & Design" data-ps="۰۲. پلان او ډیزاین">02. Planning & Design</h3><p data-en="We plan the structure and visual style for your project." data-ps="ستاسو د پروژې جوړښت او ظاهري بڼه طرحه کوو.">We plan the structure and visual style for your project.</p></article>
+    <article class="card"><h3 data-en="03. Development" data-ps="۰۳. جوړول">03. Development</h3><p data-en="We build the website and test it on different screen sizes." data-ps="ویب‌سایټ جوړوو او په بېلابېلو سکرینونو کې یې ازموینه کوو.">We build the website and test it on different screen sizes.</p></article>
+    <article class="card"><h3 data-en="04. Delivery" data-ps="۰۴. سپارل">04. Delivery</h3><p data-en="We prepare the finished website for publishing." data-ps="بشپړ شوی ویب‌سایټ د خپرولو لپاره چمتو کوو.">We prepare the finished website for publishing.</p></article>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="title" data-en="Let's Build Something Great" data-ps="راځئ یو ښه کار په ګډه جوړ کړو">Let's Build Something Great</h2>
+  <p data-en="Tell us about your business or project. We would be glad to discuss your website requirements."
+     data-ps="د خپل کاروبار یا پروژې په اړه راته ووایاست. ستاسو د ویب‌سایټ د اړتیاوو په اړه به خبرې وکړو.">
+     Tell us about your business or project. We would be glad to discuss your website requirements.
+  </p>
+  <div class="contact-links">
+    <a class="btn" href="mailto:Zhwandoonmahidi688@gmail.com">Email Us</a>
+    <a class="outline btn" href="https://wa.me/93774333444" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="outline btn" href="https://www.facebook.com/share/1A33sxUK1j/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+  </div>
+  <div class="visitor">
+    <span data-en="Website visits:" data-ps="د ویب‌سایټ لیدنې:">Website visits:</span>
+    <strong id="visitCount" aria-live="polite">…</strong>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>© 2026 <span>MAHIDI Web Development</span>. <span data-en="All rights reserved." data-ps="ټول حقوق خوندي دي.">All rights reserved.</span></p>
+  <p data-en="Turning Ideas Into Websites." data-ps="نظریات په ویب‌سایټونو بدلوو.">Turning Ideas Into Websites.</p>
+</footer>
+
+<script>
+  // Language switcher: English / Pashto
+  let currentLanguage = "en";
+  const languageButton = document.getElementById("languageButton");
+  languageButton.addEventListener("click", () => {
+    currentLanguage = currentLanguage === "en" ? "ps" : "en";
+    document.documentElement.lang = currentLanguage === "ps" ? "ps" : "en";
+    document.documentElement.dir = currentLanguage === "ps" ? "rtl" : "ltr";
+    document.querySelectorAll("[data-en][data-ps]").forEach(el => {
+      el.textContent = el.dataset[currentLanguage];
+    });
+    languageButton.textContent = currentLanguage === "en" ? "پښتو" : "English";
+  });
+
+  // Simple public page-view counter. The counter key is public, so it is only
+  // suitable for an approximate display count, not private or business-critical analytics.
+  const counterNamespace = "mahidi-web-development-2026";
+  const counterKey = "main-site-visits";
+  const countElement = document.getElementById("visitCount");
+  (async () => {
+    try {
+      const response = await fetch(`https://counterapi.com/api/${counterNamespace}/${counterKey}/up`, {cache:"no-store"});
+      if (!response.ok) throw new Error("Counter unavailable");
+      const data = await response.json();
+      const value = data.count ?? data.value ?? data.total;
+      if (Number.isFinite(Number(value))) countElement.textContent = Number(value).toLocaleString();
+      else countElement.textContent = "—";
+    } catch (error) {
+      countElement.textContent = "—";
+      console.warn("Visitor counter could not load.", error);
+    }
+  })();
+</script>
+</body>
+</html>
